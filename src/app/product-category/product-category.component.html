@@ -1,0 +1,23 @@
+<div class="container-fluid hero-contact p-0 m-0">
+  <div class="row">
+    <div *ngFor="let category of productsCategory" class="col-12">
+      <h1 style="margin-left: 50px; margin-bottom: 40px; margin-top: 40px;">{{category.categoryName}}</h1>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let prod of category.products">
+          <!-- Using col-lg-3 for 4 cards per row -->
+          <div class="card product-card mx-auto">
+            <img class="card-img-top productimg" [src]="'assets/images/' + prod.imageFile + '.png'" alt="{{prod.name}}">
+            <div class="card-body">
+              <h5 class="card-title productname">{{prod.name}}</h5>
+              <p class="card-text productdescription">{{prod.description}}</p>
+              <p class="card-text productprice">PHP {{prod.price}}</p>
+              <a routerLink="/cart" class="btn btn-primary">
+                <img src="assets/icons/shoppingcart.svg" alt="Add to cart" class="cart-icon">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

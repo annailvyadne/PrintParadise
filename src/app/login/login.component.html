@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="form-box">
+    <div class="toggle-buttons">
+      <button (click)="toggleForm(true)" [class.active]="isLogin">Login</button>
+      <button (click)="toggleForm(false)" [class.active]="!isLogin">Sign Up</button>
+    </div>
+
+
+    <!-- Login Form -->
+    <form *ngIf="isLogin" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <h2>Login</h2>
+      <input type="email" class="input-field" formControlName="email" placeholder="Email" required>
+      <input type="password" class="input-field" formControlName="password" placeholder="Password" required>
+
+      <!-- Checkbox and Forgot Password in one container -->
+      <div class="checkbox-forgot-container">
+        <div class="checkbox-container">
+          <input type="checkbox" formControlName="rememberMe" class="check-box">
+          <label for="remember-me">Remember Me</label>
+        </div>
+
+        <div class="forgot-password-container">
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="loginForm.invalid">Login</button>
+    </form>
+
+
+    <!-- Sign Up Form -->
+    <form *ngIf="!isLogin" [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+      <h2>Sign Up</h2>
+      <input type="text" class="input-field" formControlName="username" placeholder="Username" required>
+      <input type="email" class="input-field" formControlName="email" placeholder="Email" required>
+      <input type="password" class="input-field" formControlName="password" placeholder="Password" required>
+      <div class="checkbox-container">
+        <input type="checkbox" formControlName="terms" class="check-box">
+        <label for="terms">I agree to the terms & conditions</label>
+      </div>
+      <button type="submit" class="submit-btn" [disabled]="signupForm.invalid">Sign Up</button>
+    </form>
+  </div>
+</div>

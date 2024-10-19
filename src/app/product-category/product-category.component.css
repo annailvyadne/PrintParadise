@@ -1,0 +1,75 @@
+/* Adjust category title */
+.category-title {
+  margin-left: 50px; /* This can be increased further if needed */
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Product card styling */
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 600px;
+  width: 100%; /* Makes sure it takes up the full width */
+  max-width: 300px; /* Limits the width of the card */
+}
+
+/* Card column with increased margin-left */
+.col-sm-6, .col-md-4, .col-lg-3 {
+  margin-left: 30px; /* Increased margin-left between cards */
+}
+
+.product-card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Image in card */
+.productimg {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Adjust text inside card */
+.productname {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.productdescription {
+  font-size: 1rem;
+  color: #666;
+}
+
+.productprice {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Button styling */
+.cart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-primary {
+  background-color: #1A3636;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #142727;
+}

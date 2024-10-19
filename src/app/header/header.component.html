@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/images/PrintParadise-logo.png" alt="PrintParadise Logo">
+    </a>
+    <a class="brand-name" routerLink="/">PrintParadise</a>
+  </div>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="navigation" [ngClass]="{'menu-open': isMenuOpen}">
+    <a routerLink="/">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/product">Products</a>
+    <a routerLink="/cart">Cart</a>
+    <a routerLink="/contacts">Contact</a>
+    <a routerLink="/login">Account</a>
+  </nav>
+</header>

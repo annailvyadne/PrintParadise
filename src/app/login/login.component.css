@@ -1,0 +1,164 @@
+/* Reset margin and padding for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure the container covers the full width and height */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%; /* Ensure container spans the full viewport width */
+  min-height: 100vh;
+  background: linear-gradient(45deg, #00d2ff, #928DAB);
+  background-size: cover; /* Make sure the background covers the full area */
+  background-position: center;
+  margin: 0; /* Remove margin from container */
+  padding: 0;
+}
+
+/* Set an increased height for the form container */
+.form-box {
+  width: 400px;
+  height: 500px; /* Increase height */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure no content overflows */
+  position: relative;
+  transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+/* Center the heading of both forms */
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Uniform form height for both login and sign-up forms */
+.input-group {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.input-group.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Button styles */
+.toggle-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-buttons button.active {
+  background-color: #00d2ff;
+  color: white;
+}
+
+
+.input-group.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #00d2ff;
+  border-radius: 30px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Checkbox and submit button styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.check-box {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #00d2ff;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Smooth background transition for buttons */
+.toggle-buttons button.active {
+  background-color: #00d2ff;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toggle-buttons button {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Ensure both forms are hidden initially */
+#loginForm.active, #signupForm.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Container for Checkbox and Forgot Password */
+.checkbox-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Forgot Password Link Styling */
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-password {
+  text-decoration: underline;
+  color: #00d2ff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #005f99;
+}

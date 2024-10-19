@@ -1,0 +1,107 @@
+/* General Footer Styles */
+.footer {
+  background-color: #1A3636;
+  color: #fff;
+  font-family: 'Katibeh', cursive;
+  padding: 40px 20px;
+  font-size: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.logo-image {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.logo-text {
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 5px 40px 5px; /* Reduced margin */
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 2px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container, .footer-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-icons {
+    margin-top: 10px;
+  }
+}
